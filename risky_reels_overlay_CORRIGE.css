@@ -1,60 +1,6 @@
-/* Risky Reels overlay - corrected for Gamepad Viewer
-   IMPORTANT: this is used with the working PS5 DualSense skin through editcss=.
-   It targets the .xbox controller class used by Gamepad Viewer.
-*/
-
-body {
-  background: transparent !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Your artwork becomes the controller body. */
 .controller.xbox {
-  background: url("https://mathisdlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") no-repeat 0 0 !important;
-  background-size: 100% 100% !important;
-}
-
-/* Hide the original skin's visual pieces.
-   They stay present so Gamepad Viewer can still detect their input state. */
-.xbox .stick,
-.xbox .button,
-.xbox .face,
-.xbox .bumper,
-.xbox .trigger,
-.xbox .back,
-.xbox .start,
-.xbox .touchpad,
-.xbox .meta,
-.xbox .lightbar {
-  background-image: none !important;
-  box-shadow: none !important;
-  opacity: 0 !important;
-}
-
-/* Show a small white glow when an input is actually pressed.
-   This does NOT disable the Gamepad Viewer input elements. */
-.xbox .stick.pressed,
-.xbox .button.pressed,
-.xbox .face.pressed,
-.xbox .bumper.pressed,
-.xbox .trigger.pressed,
-.xbox .back.pressed,
-.xbox .start.pressed,
-.xbox .touchpad.pressed,
-.xbox .meta.pressed {
-  opacity: 1 !important;
-  background: rgba(255,255,255,.30) !important;
-  border: 3px solid rgba(255,255,255,.95) !important;
-  box-shadow: 0 0 18px rgba(255,255,255,.90) !important;
-}
-
-/* Do not show the old PS5 lightbar/touchpad artwork. */
-.xbox .quadrant {
-  display: none !important;
-}
-
-/* Keep the controller itself visible and allow Gamepad Viewer to receive input. */
-.xbox {
-  pointer-events: auto !important;
+    background-image: url("https://mathisdlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
 }
