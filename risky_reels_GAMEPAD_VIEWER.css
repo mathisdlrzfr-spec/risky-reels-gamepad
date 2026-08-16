@@ -1,0 +1,46 @@
+/*
+  Risky Reels DualSense for Gamepad Viewer
+  Loads the proven DualSense PS5 skin first, then replaces only its artwork.
+*/
+
+/* 1) Load the working DualSense PS5 skin */
+@import url("https://istador.github.io/gamepadviewer-skins/playstation/ps5/white/style.css");
+
+/* 2) Transparent page background */
+html, body {
+  background: transparent !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 3) Use the Risky Reels artwork as the visible controller */
+.controller.xbox {
+  width: 1479px !important;
+  height: 912px !important;
+  margin: 0 !important;
+  background-image: url("https://mathisdlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 0 !important;
+  background-size: 1479px 912px !important;
+}
+
+/*
+  4) Hide the original skin's visual input layers.
+  IMPORTANT: opacity:0 keeps the elements alive, so Gamepad Viewer
+  can still update their pressed state.
+*/
+.controller.xbox > div {
+  opacity: 0 !important;
+}
+
+/* Also hide pseudo/extra artwork without removing input elements. */
+.controller.xbox .quadrant,
+.controller.xbox .touchpad,
+.controller.xbox .lightbar {
+  opacity: 0 !important;
+}
+
+/* Keep the controller itself visible. */
+.controller.xbox {
+  opacity: 1 !important;
+}
