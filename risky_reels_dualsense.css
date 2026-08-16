@@ -1,0 +1,173 @@
+/*
+ Risky Reels DualSense skin for Gamepad Viewer
+ Image asset: risky_reels_dualsense.png
+
+ IMPORTANT:
+ - Put this CSS file and risky_reels_dualsense.png in the same public folder.
+ - Replace IMAGE_BASE_URL below with the public URL of that folder.
+ - Then use Gamepad Viewer with ?p=1&css=YOUR_CSS_URL
+*/
+
+body {
+  background: transparent !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.controller.custom {
+  position: relative !important;
+  width: 1479px !important;
+  height: 912px !important;
+  margin: 0 !important;
+  background: url("IMAGE_BASE_URL/risky_reels_dualsense.png") no-repeat 0 0 !important;
+  background-size: 1479px 912px !important;
+}
+
+/* Hide the normal skin artwork; the supplied image is the artwork. */
+.custom .quadrant,
+.custom .arrows,
+.custom .back,
+.custom .start {
+  display: none !important;
+}
+
+/* Keep the interactive layers, but make them invisible until pressed. */
+.custom .stick,
+.custom .button,
+.custom .face,
+.custom .bumper,
+.custom .trigger {
+  background: none !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+/* Thumbsticks */
+.custom .sticks {
+  position: absolute !important;
+  left: 438px !important;
+  top: 421px !important;
+  width: 470px !important;
+  height: 110px !important;
+}
+.custom .stick {
+  position: absolute !important;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+}
+.custom .stick.left {
+  left: 0 !important;
+  top: 0 !important;
+}
+.custom .stick.right {
+  left: 370px !important;
+  top: 0 !important;
+}
+.custom .stick.pressed {
+  opacity: .75 !important;
+  background: rgba(255,255,255,.28) !important;
+  border: 3px solid rgba(255,255,255,.9) !important;
+  box-shadow: 0 0 18px rgba(255,255,255,.9) !important;
+}
+
+/* Face buttons: triangle, circle, cross, square */
+.custom .abxy {
+  position: absolute !important;
+  left: 1060px !important;
+  top: 116px !important;
+  width: 250px !important;
+  height: 270px !important;
+}
+.custom .button {
+  position: absolute !important;
+  width: 82px !important;
+  height: 82px !important;
+  border-radius: 50% !important;
+}
+.custom .y { left: 100px !important; top: 0 !important; }
+.custom .b { left: 180px !important; top: 82px !important; }
+.custom .a { left: 100px !important; top: 164px !important; }
+.custom .x { left: 20px !important; top: 82px !important; }
+.custom .button.pressed {
+  opacity: .72 !important;
+  background: rgba(255,255,255,.35) !important;
+  border: 3px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 18px rgba(255,255,255,.9) !important;
+}
+
+/* D-pad */
+.custom .dpad {
+  position: absolute !important;
+  left: 240px !important;
+  top: 190px !important;
+  width: 155px !important;
+  height: 155px !important;
+}
+.custom .face {
+  position: absolute !important;
+  background: none !important;
+}
+.custom .face.up {
+  left: 51px !important; top: 0 !important; width: 53px !important; height: 55px !important;
+}
+.custom .face.down {
+  left: 51px !important; top: 100px !important; width: 53px !important; height: 55px !important;
+}
+.custom .face.left {
+  left: 0 !important; top: 51px !important; width: 55px !important; height: 53px !important;
+}
+.custom .face.right {
+  left: 100px !important; top: 51px !important; width: 55px !important; height: 53px !important;
+}
+.custom .face.pressed {
+  opacity: .72 !important;
+  background: rgba(255,255,255,.35) !important;
+  border: 3px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 14px rgba(255,255,255,.9) !important;
+}
+
+/* L1/R1 and L2/R2: broad highlight zones over the artwork. */
+.custom .bumpers {
+  position: absolute !important;
+  left: 130px !important;
+  top: 0 !important;
+  width: 1220px !important;
+  height: 90px !important;
+}
+.custom .bumper {
+  position: absolute !important;
+  top: 0 !important;
+  width: 390px !important;
+  height: 70px !important;
+  border-radius: 35px !important;
+}
+.custom .bumper.left { left: 0 !important; }
+.custom .bumper.right { right: 0 !important; }
+.custom .bumper.pressed {
+  opacity: .45 !important;
+  background: rgba(255,255,255,.4) !important;
+  box-shadow: 0 0 22px rgba(255,255,255,.8) !important;
+}
+
+.custom .triggers {
+  position: absolute !important;
+  left: 130px !important;
+  top: 40px !important;
+  width: 1220px !important;
+  height: 150px !important;
+}
+.custom .trigger {
+  position: absolute !important;
+  top: 0 !important;
+  width: 390px !important;
+  height: 130px !important;
+  border-radius: 50px !important;
+}
+.custom .trigger.left { left: 0 !important; }
+.custom .trigger.right { right: 0 !important; }
+.custom .trigger.pressed {
+  opacity: .25 !important;
+  background: rgba(255,255,255,.45) !important;
+  box-shadow: 0 0 22px rgba(255,255,255,.75) !important;
+}
