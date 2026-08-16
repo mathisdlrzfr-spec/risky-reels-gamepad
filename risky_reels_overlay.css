@@ -1,0 +1,31 @@
+/* Risky Reels overlay for the working DualSense PS5 skin.
+   This is an EDIT CSS: it keeps the working PS5 skin/input structure
+   and replaces only the visible shell with the user's artwork.
+*/
+
+.custom.controller {
+  background-image: url("https://mathisdlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.custom.controller::after {
+  background-image: none !important;
+}
+
+/* Hide the original PS5 artwork layers so the Risky Reels artwork is the
+   only visible controller image. The elements remain in the DOM so the
+   Gamepad Viewer can still receive input. */
+.custom .trigger,
+.custom .bumper,
+.custom .face,
+.custom .button,
+.custom .stick,
+.custom .back,
+.custom .start,
+.custom .touchpad,
+.custom .meta,
+.custom .lightbar {
+  opacity: 0 !important;
+}
