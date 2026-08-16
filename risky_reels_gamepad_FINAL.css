@@ -1,0 +1,216 @@
+/* Risky Reels DualSense - Gamepad Viewer custom skin
+   Based on the Gamepad Viewer DualSense structure.
+   The supplied Risky Reels artwork is the visible controller body.
+*/
+
+body {
+  background: transparent !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.controller.xbox {
+  width: 1479px !important;
+  height: 912px !important;
+  margin: 0 !important;
+  background: url("https://mathsidlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") no-repeat 0 0 !important;
+  background-size: 1479px 912px !important;
+}
+
+/* Keep the artwork as the visible layer. */
+.xbox .quadrant {
+  display: none !important;
+}
+
+/* ---------- Sticks ---------- */
+.xbox .sticks {
+  position: absolute !important;
+  width: 500px !important;
+  height: 150px !important;
+  left: 440px !important;
+  top: 450px !important;
+}
+
+.xbox .stick {
+  position: absolute !important;
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.xbox .stick.left {
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.xbox .stick.right {
+  left: 390px !important;
+  top: 0 !important;
+}
+
+.xbox .stick.pressed {
+  opacity: .65 !important;
+  background: rgba(255,255,255,.30) !important;
+  border: 3px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 20px rgba(255,255,255,.9) !important;
+}
+
+/* ---------- Face buttons ---------- */
+.xbox .abxy {
+  position: absolute !important;
+  width: 300px !important;
+  height: 320px !important;
+  left: 1060px !important;
+  top: 125px !important;
+}
+
+.xbox .button {
+  position: absolute !important;
+  width: 88px !important;
+  height: 88px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.xbox .a { left: 105px !important; top: 195px !important; }
+.xbox .b { left: 195px !important; top: 105px !important; }
+.xbox .x { left: 15px !important; top: 105px !important; }
+.xbox .y { left: 105px !important; top: 15px !important; }
+
+.xbox .button.pressed {
+  opacity: .70 !important;
+  background: rgba(255,255,255,.32) !important;
+  border: 3px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 20px rgba(255,255,255,.9) !important;
+}
+
+/* ---------- D-pad ---------- */
+.xbox .dpad {
+  position: absolute !important;
+  width: 180px !important;
+  height: 180px !important;
+  left: 235px !important;
+  top: 225px !important;
+}
+
+.xbox .face {
+  position: absolute !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.xbox .face.up {
+  width: 60px !important;
+  height: 65px !important;
+  left: 60px !important;
+  top: 0 !important;
+}
+.xbox .face.down {
+  width: 60px !important;
+  height: 65px !important;
+  left: 60px !important;
+  top: 115px !important;
+}
+.xbox .face.left {
+  width: 65px !important;
+  height: 60px !important;
+  left: 0 !important;
+  top: 60px !important;
+}
+.xbox .face.right {
+  width: 65px !important;
+  height: 60px !important;
+  left: 115px !important;
+  top: 60px !important;
+}
+
+.xbox .face.pressed {
+  opacity: .70 !important;
+  background: rgba(255,255,255,.32) !important;
+  border: 3px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 18px rgba(255,255,255,.9) !important;
+}
+
+/* ---------- Touch/Options area ---------- */
+.xbox .arrows {
+  left: 320px !important;
+  top: 300px !important;
+  width: 840px !important;
+  height: 100px !important;
+  opacity: 0 !important;
+}
+
+.xbox .back,
+.xbox .start {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* ---------- Bumpers ---------- */
+.xbox .bumpers {
+  position: absolute !important;
+  width: 1250px !important;
+  height: 100px !important;
+  left: 115px !important;
+  top: 20px !important;
+}
+
+.xbox .bumper {
+  position: absolute !important;
+  width: 390px !important;
+  height: 80px !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+.xbox .bumper.left { left: 0 !important; }
+.xbox .bumper.right { right: 0 !important; }
+
+.xbox .bumper.pressed {
+  opacity: .55 !important;
+  background: rgba(255,255,255,.30) !important;
+  box-shadow: 0 0 22px rgba(255,255,255,.8) !important;
+}
+
+/* ---------- Triggers ---------- */
+.xbox .triggers {
+  position: absolute !important;
+  width: 1250px !important;
+  height: 180px !important;
+  left: 115px !important;
+  top: 20px !important;
+}
+
+.xbox .trigger {
+  position: absolute !important;
+  width: 390px !important;
+  height: 150px !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+.xbox .trigger.left { left: 0 !important; }
+.xbox .trigger.right { right: 0 !important; }
+
+.xbox .trigger.pressed {
+  opacity: .28 !important;
+  background: rgba(255,255,255,.45) !important;
+  box-shadow: 0 0 24px rgba(255,255,255,.8) !important;
+}
+
+/* Prevent the old skin's artwork from showing over the Risky Reels image. */
+.xbox .stick,
+.xbox .button,
+.xbox .face,
+.xbox .bumper,
+.xbox .trigger,
+.xbox .back,
+.xbox .start {
+  background-image: none !important;
+}
