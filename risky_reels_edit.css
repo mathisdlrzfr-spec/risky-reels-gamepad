@@ -1,0 +1,48 @@
+/*
+ Risky Reels overlay for the Gamepad Viewer PS5 skin.
+ Use this file with the working PS5 base skin via editcss=.
+*/
+
+html, body {
+  background: transparent !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.custom.controller {
+  width: 1479px !important;
+  height: 912px !important;
+  background-image: url("https://mathsidlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") !important;
+  background-size: 1479px 912px !important;
+  background-position: left top !important;
+  background-repeat: no-repeat !important;
+}
+
+/* The supplied artwork already contains the sticks, D-pad and face buttons.
+   Keep Gamepad Viewer's input elements in place, but make their artwork invisible.
+*/
+.custom.controller::after,
+.custom .triggers::before,
+.custom .triggers::after,
+.custom .trigger,
+.custom .bumper,
+.custom .face,
+.custom .button,
+.custom .stick,
+.custom .back,
+.custom .start,
+.custom .touchpad,
+.custom .lightbar,
+.custom .quadrant {
+  opacity: 0 !important;
+}
+
+/* Keep input hit/position elements present. */
+.custom .triggers,
+.custom .bumpers,
+.custom .dpad,
+.custom .abxy,
+.custom .arrows,
+.custom .sticks {
+  background-image: none !important;
+}
