@@ -1,0 +1,148 @@
+/*
+  Risky Reels DualSense skin
+  Based on the DualSense Gamepad Viewer skin structure.
+  The supplied Risky Reels artwork is used as the controller body.
+*/
+
+body {
+  background: transparent !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Gamepad Viewer base skin is Xbox in this custom-skin mode.
+   We replace only the artwork while retaining the input DOM. */
+.controller.xbox {
+  position: relative !important;
+  background: url("https://mathsidlrzfr-spec.github.io/risky-reels-gamepad/risky_reels_dualsense.png") no-repeat 0 0 !important;
+  background-size: 807px auto !important;
+  width: 807px !important;
+  height: 651px !important;
+  margin: 0 !important;
+}
+
+/* Hide the built-in artwork for sticks/buttons/d-pad.
+   The supplied image already contains the visual buttons. */
+.controller.xbox .stick,
+.controller.xbox .button,
+.controller.xbox .face,
+.controller.xbox .bumper,
+.controller.xbox .trigger,
+.controller.xbox .back,
+.controller.xbox .start,
+.controller.xbox .quadrant {
+  background: none !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+/* Keep input elements alive and add a subtle white pressed indicator. */
+.controller.xbox .stick.pressed,
+.controller.xbox .button.pressed,
+.controller.xbox .face.pressed,
+.controller.xbox .bumper.pressed,
+.controller.xbox .trigger.pressed {
+  opacity: 1 !important;
+  background: rgba(255,255,255,.28) !important;
+  border: 2px solid rgba(255,255,255,.9) !important;
+  box-shadow: 0 0 14px rgba(255,255,255,.9) !important;
+}
+
+/* Approximate DualSense input zones on the supplied artwork.
+   The zones are transparent until the corresponding input is active. */
+.controller.xbox .sticks {
+  width: 300px !important;
+  height: 90px !important;
+  left: 225px !important;
+  top: 350px !important;
+}
+
+.controller.xbox .stick {
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50% !important;
+}
+.controller.xbox .stick.left {
+  left: 0 !important;
+  top: 0 !important;
+}
+.controller.xbox .stick.right {
+  left: 210px !important;
+  top: 0 !important;
+}
+
+.controller.xbox .abxy {
+  width: 175px !important;
+  height: 175px !important;
+  left: 555px !important;
+  top: 155px !important;
+}
+
+.controller.xbox .button {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50% !important;
+}
+.controller.xbox .a { left: 60px !important; top: 120px !important; }
+.controller.xbox .b { left: 120px !important; top: 60px !important; }
+.controller.xbox .x { left: 0 !important; top: 60px !important; }
+.controller.xbox .y { left: 60px !important; top: 0 !important; }
+
+.controller.xbox .dpad {
+  width: 145px !important;
+  height: 145px !important;
+  left: 150px !important;
+  top: 165px !important;
+}
+
+.controller.xbox .face {
+  opacity: 0 !important;
+  background: none !important;
+}
+.controller.xbox .face.up,
+.controller.xbox .face.down {
+  width: 52px !important;
+  height: 60px !important;
+  left: 46px !important;
+}
+.controller.xbox .face.up { top: 0 !important; }
+.controller.xbox .face.down { top: 82px !important; }
+.controller.xbox .face.left,
+.controller.xbox .face.right {
+  width: 60px !important;
+  height: 52px !important;
+  top: 46px !important;
+}
+.controller.xbox .face.left { left: 0 !important; }
+.controller.xbox .face.right { left: 83px !important; }
+
+.controller.xbox .bumpers {
+  width: 620px !important;
+  height: 45px !important;
+  left: 93px !important;
+  top: 95px !important;
+}
+.controller.xbox .bumper {
+  width: 110px !important;
+  height: 40px !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+
+.controller.xbox .triggers {
+  width: 620px !important;
+  height: 110px !important;
+  left: 93px !important;
+  top: 0 !important;
+}
+.controller.xbox .trigger {
+  width: 110px !important;
+  height: 108px !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+
+/* Prevent the base Xbox logo/art from showing through. */
+.controller.xbox .arrows {
+  opacity: 0 !important;
+}
